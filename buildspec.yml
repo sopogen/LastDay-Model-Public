@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging into Amazon ECR...
+      - aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin .dkr.ecr.ap-northeast-2.amazonaws.com
+  build:
+    commands:
+      - echo build phase start...
+      - docker build -t .dkr.ecr.ap-northeast-2.amazonaws.com/lastday-model:latest .
+  post_build:
+    commands:
+      - echo post build phase
+      - docker push .dkr.ecr.ap-northeast-2.amazonaws.com/lastday-model:latest

@@ -1,0 +1,15 @@
+prod:
+  tour:
+    encoded_key: ""
+    decoded_key: ""
+    url: "http://api.visitkorea.or.kr/openapi/service"
+  kakao:
+    key: ""
+
+dev:
+  tour:
+    encoded_key: ""
+    decoded_key: ""
+    url: "http://api.visitkorea.or.kr/openapi/service"
+  kakao:
+    key: ""
